@@ -138,14 +138,14 @@ LFOWidget::LFOWidget() {
 	addChild(createScrew<ScrewSilver>(Vec(15, 365)));
 	addChild(createScrew<ScrewSilver>(Vec(box.size.x-30, 365)));
 
-	addParam(createParam<CKSS>(Vec(15, 77), module, LFO::OFFSET_PARAM, 0.0, 1.0, 1.0));
-	addParam(createParam<CKSS>(Vec(119, 77), module, LFO::INVERT_PARAM, 0.0, 1.0, 1.0));
+    addParam(createParam<CKSS>(Vec(15, 77), module, LFO::OFFSET_PARAM, 0.0, 1.0, 1.0, "offset"));
+    addParam(createParam<CKSS>(Vec(119, 77), module, LFO::INVERT_PARAM, 0.0, 1.0, 1.0, "invert"));
 
-	addParam(createParam<RoundHugeBlackKnob>(Vec(47, 61), module, LFO::FREQ_PARAM, -8.0, 6.0, -1.0));
-	addParam(createParam<RoundBlackKnob>(Vec(23, 143), module, LFO::FM1_PARAM, 0.0, 1.0, 0.0));
-	addParam(createParam<RoundBlackKnob>(Vec(91, 143), module, LFO::PW_PARAM, 0.0, 1.0, 0.5));
-	addParam(createParam<RoundBlackKnob>(Vec(23, 208), module, LFO::FM2_PARAM, 0.0, 1.0, 0.0));
-	addParam(createParam<RoundBlackKnob>(Vec(91, 208), module, LFO::PWM_PARAM, 0.0, 1.0, 0.0));
+    addParam(createParam<RoundHugeBlackKnob>(Vec(47, 61), module, LFO::FREQ_PARAM, -8.0, 6.0, -1.0, "freq"));
+    addParam(createParam<RoundBlackKnob>(Vec(23, 143), module, LFO::FM1_PARAM, 0.0, 1.0, 0.0, "FM1"));
+    addParam(createParam<RoundBlackKnob>(Vec(91, 143), module, LFO::PW_PARAM, 0.0, 1.0, 0.5, "PW"));
+    addParam(createParam<RoundBlackKnob>(Vec(23, 208), module, LFO::FM2_PARAM, 0.0, 1.0, 0.0, "FM2"));
+    addParam(createParam<RoundBlackKnob>(Vec(91, 208), module, LFO::PWM_PARAM, 0.0, 1.0, 0.0, "PWM"));
 
 	addInput(createInput<PJ301MPort>(Vec(11, 276), module, LFO::FM1_INPUT));
 	addInput(createInput<PJ301MPort>(Vec(45, 276), module, LFO::FM2_INPUT));
@@ -234,12 +234,12 @@ LFO2Widget::LFO2Widget() {
 	addChild(createScrew<ScrewSilver>(Vec(15, 365)));
 	addChild(createScrew<ScrewSilver>(Vec(box.size.x-30, 365)));
 
-	addParam(createParam<CKSS>(Vec(62, 150), module, LFO2::OFFSET_PARAM, 0.0, 1.0, 1.0));
-	addParam(createParam<CKSS>(Vec(62, 215), module, LFO2::INVERT_PARAM, 0.0, 1.0, 1.0));
+    addParam(createParam<CKSS>(Vec(62, 150), module, LFO2::OFFSET_PARAM, 0.0, 1.0, 1.0, "offset"));
+    addParam(createParam<CKSS>(Vec(62, 215), module, LFO2::INVERT_PARAM, 0.0, 1.0, 1.0, "invert"));
 
-	addParam(createParam<RoundHugeBlackKnob>(Vec(18, 60), module, LFO2::FREQ_PARAM, -8.0, 6.0, -1.0));
-	addParam(createParam<RoundBlackKnob>(Vec(11, 142), module, LFO2::WAVE_PARAM, 0.0, 3.0, 0.0));
-	addParam(createParam<RoundBlackKnob>(Vec(11, 207), module, LFO2::FM_PARAM, 0.0, 1.0, 0.5));
+    addParam(createParam<RoundHugeBlackKnob>(Vec(18, 60), module, LFO2::FREQ_PARAM, -8.0, 6.0, -1.0, "freq"));
+    addParam(createParam<RoundBlackKnob>(Vec(11, 142), module, LFO2::WAVE_PARAM, 0.0, 3.0, 0.0, "wave"));
+    addParam(createParam<RoundBlackKnob>(Vec(11, 207), module, LFO2::FM_PARAM, 0.0, 1.0, 0.5, "FM"));
 
 	addInput(createInput<PJ301MPort>(Vec(11, 276), module, LFO2::FM_INPUT));
 	addInput(createInput<PJ301MPort>(Vec(54, 276), module, LFO2::RESET_INPUT));

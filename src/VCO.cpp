@@ -247,14 +247,14 @@ VCOWidget::VCOWidget() {
 	addChild(createScrew<ScrewSilver>(Vec(15, 365)));
 	addChild(createScrew<ScrewSilver>(Vec(box.size.x-30, 365)));
 
-	addParam(createParam<CKSS>(Vec(15, 77), module, VCO::MODE_PARAM, 0.0, 1.0, 1.0));
-	addParam(createParam<CKSS>(Vec(119, 77), module, VCO::SYNC_PARAM, 0.0, 1.0, 1.0));
+    addParam(createParam<CKSS>(Vec(15, 77), module, VCO::MODE_PARAM, 0.0, 1.0, 1.0, "mode"));
+    addParam(createParam<CKSS>(Vec(119, 77), module, VCO::SYNC_PARAM, 0.0, 1.0, 1.0, "sync"));
 
-	addParam(createParam<RoundHugeBlackKnob>(Vec(47, 61), module, VCO::FREQ_PARAM, -54.0, 54.0, 0.0));
-	addParam(createParam<RoundBlackKnob>(Vec(23, 143), module, VCO::FINE_PARAM, -1.0, 1.0, 0.0));
-	addParam(createParam<RoundBlackKnob>(Vec(91, 143), module, VCO::PW_PARAM, 0.0, 1.0, 0.5));
-	addParam(createParam<RoundBlackKnob>(Vec(23, 208), module, VCO::FM_PARAM, 0.0, 1.0, 0.0));
-	addParam(createParam<RoundBlackKnob>(Vec(91, 208), module, VCO::PWM_PARAM, 0.0, 1.0, 0.0));
+    addParam(createParam<RoundHugeBlackKnob>(Vec(47, 61), module, VCO::FREQ_PARAM, -54.0, 54.0, 0.0, "freq"));
+    addParam(createParam<RoundBlackKnob>(Vec(23, 143), module, VCO::FINE_PARAM, -1.0, 1.0, 0.0, "fine"));
+    addParam(createParam<RoundBlackKnob>(Vec(91, 143), module, VCO::PW_PARAM, 0.0, 1.0, 0.5, "pw"));
+    addParam(createParam<RoundBlackKnob>(Vec(23, 208), module, VCO::FM_PARAM, 0.0, 1.0, 0.0, "fm"));
+    addParam(createParam<RoundBlackKnob>(Vec(91, 208), module, VCO::PWM_PARAM, 0.0, 1.0, 0.0, "pwm"));
 
 	addInput(createInput<PJ301MPort>(Vec(11, 276), module, VCO::PITCH_INPUT));
 	addInput(createInput<PJ301MPort>(Vec(45, 276), module, VCO::FM_INPUT));
@@ -348,9 +348,9 @@ VCO2Widget::VCO2Widget() {
 	addParam(createParam<CKSS>(Vec(62, 150), module, VCO2::MODE_PARAM, 0.0, 1.0, 1.0));
 	addParam(createParam<CKSS>(Vec(62, 215), module, VCO2::SYNC_PARAM, 0.0, 1.0, 1.0));
 
-	addParam(createParam<RoundHugeBlackKnob>(Vec(17, 60), module, VCO2::FREQ_PARAM, -54.0, 54.0, 0.0));
-	addParam(createParam<RoundBlackKnob>(Vec(12, 143), module, VCO2::WAVE_PARAM, 0.0, 3.0, 1.5));
-	addParam(createParam<RoundBlackKnob>(Vec(12, 208), module, VCO2::FM_PARAM, 0.0, 1.0, 0.0));
+    addParam(createParam<RoundHugeBlackKnob>(Vec(17, 60), module, VCO2::FREQ_PARAM, -54.0, 54.0, 0.0, "freq"));
+    addParam(createParam<RoundBlackKnob>(Vec(12, 143), module, VCO2::WAVE_PARAM, 0.0, 3.0, 1.5, "wave"));
+    addParam(createParam<RoundBlackKnob>(Vec(12, 208), module, VCO2::FM_PARAM, 0.0, 1.0, 0.0, "fm"));
 
 	addInput(createInput<PJ301MPort>(Vec(11, 276), module, VCO2::FM_INPUT));
 	addInput(createInput<PJ301MPort>(Vec(54, 276), module, VCO2::SYNC_INPUT));

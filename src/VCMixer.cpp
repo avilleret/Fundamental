@@ -63,10 +63,10 @@ VCMixerWidget::VCMixerWidget() {
 	addChild(createScrew<ScrewSilver>(Vec(15, 365)));
 	addChild(createScrew<ScrewSilver>(Vec(box.size.x-30, 365)));
 
-	addParam(createParam<RoundLargeBlackKnob>(Vec(52, 58), module, VCMixer::MIX_PARAM, 0.0, 1.0, 0.5));
-	addParam(createParam<RoundBlackKnob>(Vec(57, 139), module, VCMixer::CH1_PARAM, 0.0, 1.0, 0.0));
-	addParam(createParam<RoundBlackKnob>(Vec(57, 219), module, VCMixer::CH2_PARAM, 0.0, 1.0, 0.0));
-	addParam(createParam<RoundBlackKnob>(Vec(57, 300), module, VCMixer::CH3_PARAM, 0.0, 1.0, 0.0));
+    addParam(createParam<RoundLargeBlackKnob>(Vec(52, 58), module, VCMixer::MIX_PARAM, 0.0, 1.0, 0.5, "mix"));
+    addParam(createParam<RoundBlackKnob>(Vec(57, 139), module, VCMixer::CH1_PARAM, 0.0, 1.0, 0.0, "channel.1"));
+    addParam(createParam<RoundBlackKnob>(Vec(57, 219), module, VCMixer::CH2_PARAM, 0.0, 1.0, 0.0, "channel.2"));
+    addParam(createParam<RoundBlackKnob>(Vec(57, 300), module, VCMixer::CH3_PARAM, 0.0, 1.0, 0.0, "channel.3"));
 
 	addInput(createInput<PJ301MPort>(Vec(16, 69), module, VCMixer::MIX_CV_INPUT));
 	addInput(createInput<PJ301MPort>(Vec(22, 129), module, VCMixer::CH1_INPUT));

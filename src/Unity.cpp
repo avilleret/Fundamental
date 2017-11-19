@@ -19,7 +19,7 @@ struct Unity : Module {
 		INV2_OUTPUT,
 		NUM_OUTPUTS
 	};
-	enum LightIds {
+    enum LightIds {
 		VU1_LIGHT,
 		VU2_LIGHT = VU1_LIGHT + 5,
 		NUM_LIGHTS = VU2_LIGHT + 5
@@ -98,8 +98,8 @@ UnityWidget::UnityWidget() {
 	addChild(createScrew<ScrewSilver>(Vec(15, 365)));
 	addChild(createScrew<ScrewSilver>(Vec(box.size.x - 30, 365)));
 
-	addParam(createParam<CKSS>(mm2px(Vec(12.867, 52.961)), module, Unity::AVG1_PARAM, 0.0, 1.0, 0.0));
-	addParam(createParam<CKSS>(mm2px(Vec(12.867, 107.006)), module, Unity::AVG2_PARAM, 0.0, 1.0, 0.0));
+    addParam(createParam<CKSS>(mm2px(Vec(12.867, 52.961)), module, Unity::AVG1_PARAM, 0.0, 1.0, 0.0, "AVG.1"));
+    addParam(createParam<CKSS>(mm2px(Vec(12.867, 107.006)), module, Unity::AVG2_PARAM, 0.0, 1.0, 0.0, "AVG.2"));
 
 	addInput(createInput<PJ301MPort>(mm2px(Vec(2.361, 17.144)), module, Unity::IN1_INPUT + 0));
 	addInput(createInput<PJ301MPort>(mm2px(Vec(19.907, 17.144)), module, Unity::IN1_INPUT + 1));
